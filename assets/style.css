@@ -1,0 +1,289 @@
+* {
+    background-color: #D1E9F6;
+    color: #1F316F;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 3vh;
+    line-height: 150%;
+    margin: 0;
+    padding: 0
+    ;
+  }
+  ::selection{
+    background: var(#1F316F);
+    color: var(#F9DBBA);
+
+  }
+  
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 2vh 2vw;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .logo {
+    width: 10vw;
+    margin-left: 2vh;
+  }
+  
+  .main {
+    display:flex;
+    flex: 1;
+    align-items:stretch;
+    justify-content: flex-star;
+    padding: 2vh 5vw;    
+    position: relative;
+    
+  }
+  
+  .encriptador {
+    
+    flex: 2;
+    margin-right: 5vw;
+    height: 100%;
+    z-index: 2;
+    width:80%;
+    max-width: 60vw;
+    
+    
+  }
+  
+  .cajaTexto {
+    background-color:  transparent;
+    width: 70%;
+    max-width: 60vw;
+    height: 50vh;
+    padding: 1vh 2vw;
+    border:none;
+    resize: none;
+  }
+  
+  .pie-info {
+    font-size: 1.3vh;
+    color: #354F52;
+    text-align: left;
+  }
+  
+  .div-botones {
+    display: flex;
+    margin-top: 2vh;
+    justify-content: left;
+  }
+  .nota-al-pie{
+    display: flex;
+    align-items: center;
+    margin-top: 1vh; 
+
+  }
+  .exclamacion{
+    height: 2vh;
+    margin-right: 0.5vw;
+
+  }
+  
+  .encriptar, .desencriptar {
+    background-color: #1A4870;
+    font-size: 14px;
+    border-radius: 24px;
+    color:#F9DBBA;
+    width: 48%; 
+    cursor: pointer;
+    height: 7vh;
+    max-width: 20vw;
+    border: none;
+    margin:1vw;
+    box-shadow: 0px 4px 10px #2F3E46;
+  }
+  .encriptar:disabled, .desencriptar:disabled {
+    background-color: #cccccc; /* Cambia el color de fondo */
+    color:#000000;
+    cursor: not-allowed;       /* Cambia el cursor a no permitido */
+   
+}
+  .desencriptar {
+    background-color: #F9DBBA;
+    color:#2F3E46;
+  }
+  
+  .resultado-encriptado {
+    flex: 1;
+    position: absolute;
+    top: -7vh; 
+    z-index: 2; 
+    height: 110%;   
+    margin-left:auto;
+    border: 2px solid #2F3E46;
+    background-color: #F9DBBA;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 2vh;
+    text-align: center; 
+    max-height: 80vh;
+    width: 80%;
+    max-width: 25vw;
+    justify-content: space-around; 
+    box-shadow: 0px 4px 10px #2F3E46;
+    right:3vw;
+   
+   
+  }
+  
+  .resultado {
+    display: flex;
+    height: 60vh;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between;
+    background-image: url("/CHALLENGE/assets/Muñeco.png");
+    background-size:contain; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-color: transparent;
+   
+  }
+  
+   
+  .mensaje1  {
+    font-size: 2.5vh;
+    color: #2F3E46;
+    font-weight: 600;
+    background-color: transparent;
+  }
+  
+  .mensaje2 {
+    font-size: 2vh;
+    color: #2F3E46;
+    background-color: transparent ;
+  }
+  
+  .resultado {
+    border-radius: 5%;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    height: 30vh;
+    margin-top: 8vh;
+    padding: 1vh 2vw;
+    color: #1F316F;
+    resize: none;
+  }
+  
+  .boton {
+   
+    margin-top: 5vh;
+    background-color: transparent;
+  }
+  
+  .copiar {
+    background-color:#1A4870;
+    font-size: 14px;
+    border-radius: 24px;
+    width:80%;
+    max-width: 300px; 
+    cursor: pointer;
+    height: 7vh;
+    color:#F9DBBA;
+    box-shadow: 0px 4px 10px #2F3E46;
+    visibility:hidden;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #1A4870;
+    padding: 2vh 0;
+  }
+  
+  .pie {
+    color: #F9DBBA;
+    font-size: 2vh;  
+    text-align: left;
+    background-color: transparent;
+  }
+  
+ /* ----- ajustes para media ------*/
+ 
+ @media(max-width: 1250px) {
+  .resultado {
+    background-image: none; /* Quita la imagen de fondo */
+  }
+
+  .resultado-encriptado {
+    position: static; /* Elimina la posición absoluta */
+    margin-top: 5vh;  /* Añade un margen superior para separar las secciones */
+    width: 100%;      /* Ajusta el ancho al 100% */
+    max-width: none;  /* Elimina la restricción de ancho máximo */
+  }
+
+  .main {
+    flex-direction: column; /* Coloca las secciones en una columna */
+    align-items: center;    /* Centra las secciones horizontalmente */
+  }
+
+  .encriptador {
+    margin-right: 0;  /* Elimina el margen derecho */
+    width: 100%;      /* Ajusta el ancho al 100% */
+    max-width: none;  /* Elimina la restricción de ancho máximo */
+  }
+  .cajaTexto{
+    width: 100%;
+    max-width: none;
+  }
+
+  .div-botones {
+    flex-direction: row;  /* Mantiene los botones en la misma fila */
+    justify-content:space-evenly /* Distribuye los botones en la fila */
+  }
+
+  .encriptar, .desencriptar {
+    max-width: none;
+    width: 100%;      /* Ajusta el ancho de los botones al 100% */
+    margin: 1vh 0;    /* Añade un margen vertical entre los botones */
+  }
+}
+@media(max-width: 720px) {
+  .resultado {
+    background-image: none; /* Quita la imagen de fondo */
+  }
+
+  .resultado-encriptado {
+    position: static; /* Elimina la posición absoluta */
+    margin-top: 5vh;  /* Añade un margen superior para separar las secciones */
+    width: 100%;      /* Ajusta el ancho al 100% */
+    max-width: none;  /* Elimina la restricción de ancho máximo */
+  }
+
+  .main {
+    flex-direction: column; /* Coloca las secciones en una columna */
+    align-items: center;    /* Centra las secciones horizontalmente */
+  }
+
+  .encriptador {
+    margin-right: 0;  /* Elimina el margen derecho */
+    width: 100%;      /* Ajusta el ancho al 100% */
+    max-width: none;  /* Elimina la restricción de ancho máximo */
+  }
+
+  .div-botones {
+    flex-direction: column;  /* Cambia la dirección a columna */
+    align-items: center;     /* Centra los botones horizontalmente */
+    justify-content: center; /* Centra los botones verticalmente */
+  }
+
+  .encriptar, .desencriptar {
+    width: 80%;       /* Ajusta el ancho de los botones */
+    margin: 1vh; 
+  }
+}

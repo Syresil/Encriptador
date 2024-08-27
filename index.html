@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+ <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador de Texto</title>
+        <link rel="stylesheet" href="./assets/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+ <header class="header">
+        <img class="logo" src="./assets/Frame 6.png" alt="logo de alura" > 
+ </header>
+ <main class="main">
+        <section class="encriptador">
+                <textarea class="cajaTexto" rows="10" cols="30" placeholder="Ingrese el texto aquí" oninput="verificarTexto()"></textarea>
+                     <div class="nota-al-pie">
+                            <img class="exclamacion" src="./assets/bi_exclamation-circle-fill.png">
+                            <p class="pie-info">Solo letras minúsculas sin acentos </p>
+                     </div>
+                     <div class="div-botones">
+                      <button class="encriptar" disabled onclick="btnEncriptar()">Encriptar</button>
+                      <button class="desencriptar" disabled onclick="btnDesencriptar()">Desencriptar</button>
+                     </div>
+    
+                         
+
+        </section>
+        <section class="resultado-encriptado">
+                     <textarea class="resultado" cols="20" rows="10" readonly> </textarea>
+                     <p class="mensaje1">No se ha encontrado ningún texto</p>
+                     <p class="mensaje2">Ingresa el texto que deseas encriptar o desencriptar</p> 
+             
+              <div class="boton">
+                     <button class="copiar" onclick="copiarAlPortapapeles()">Copiar </button>
+              </div>
+        </section>
+ 
+        
+ </main>
+ <footer class="footer">
+       <p class="pie"> Desarrollado para Alura Latam por Silvina Racigh</p>
+ </footer>
+
+<script src="encriptador.js"></script>   
+</body>
+
+</html>
